@@ -55,9 +55,7 @@ int main(){
 
 /*
 1. Precheck: If the start cell obstacleGrid[0][0] is an obstacle, return 0. Handle the special 1x1 grid cases explicitly.
-
 2. Mark obstacles: Replace every 1 in the grid with -1 as a marker for obstacles (to distinguish them from computed path counts).
-
 3. First row / first column handling: Use two boolean flags flagFirstRow and flagFirstCol to record if an obstacle has already been encountered in the first row or first column. While iterating:
     1. For cells in the first row (i == 0): if you hit an obstacle, set the flag and store 0 for that cell; otherwise store 1 if no earlier obstacle in that row, or 0 if an earlier obstacle exists (because any cell after an obstacle on the same row is unreachable).
     2. For cells in the first column (j == 0): analogous handling with flagFirstCol.
@@ -66,3 +64,4 @@ int main(){
     2. Otherwise set obstacleGrid[i][j] = obstacleGrid[i-1][j] + obstacleGrid[i][j-1] (sum of ways from top and left).
 5. Result: After filling the grid, return obstacleGrid[m-1][n-1] (number of unique paths to bottom-right).
 */
+

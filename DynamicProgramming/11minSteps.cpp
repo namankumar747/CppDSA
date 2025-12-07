@@ -27,6 +27,7 @@ int main(){
     cout << minSteps(n, dp) << endl;
 }
 //Algorithm: Try to solve using recursion and find recurrence relation, then apply dp array for memoization to store results of subproblems.
-//Once Recusrrence relation is found, you can solve the code using memoization or tabulation both.
+//Once Recurrence relation is found, you can solve the code using memoization or tabulation both.
 
 //**Recurrence Relation - f(i) = 1 + min( f(i-1), f(i/2), f(i/3) ) with condition that i should be dividible by 2 and 3 otherwise put INT_MAX
+

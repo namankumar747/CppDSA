@@ -2,6 +2,7 @@
 #include<vector>
 #include<unordered_set>
 #include<queue>
+#include<climits>
 using namespace std;
 
 void PrintVector(vector<int> arr){
@@ -16,7 +17,7 @@ void bfs(vector<vector<int>> graph, int startNode, int vertex, vector<int> &Leve
     unordered_set<int> visited;
     qu.push(startNode);
     visited.insert(startNode);
-    LevelVector.resize(vertex, INT32_MAX);
+    LevelVector.resize(vertex, INT_MAX);
     LevelVector[startNode] = 0;
 
     while(qu.size() != 0){
@@ -37,4 +38,5 @@ int main(){
     vector<int> LevelVector;
     bfs(graph, 0, 7, LevelVector);
     PrintVector(LevelVector);
+
 }
